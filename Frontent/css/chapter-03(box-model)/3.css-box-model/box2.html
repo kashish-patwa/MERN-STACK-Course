@@ -1,0 +1,31 @@
+<!-- case 2:content as well as padding inside a box or html element -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            padding: 40px;
+        }
+    </style>
+    <title>content+padding</title>
+</head>
+<body>
+        <div>
+
+        </div>
+</body>
+</html>
+
+
+<!-- explanation -->
+
+<!-- here width and height  of the  content is 200px and 200px respectively -->
+<!--so basically we have reserved the 200*200 square  area for the content   -->
+<!-- as this area is insdie the box so box size or area would be also 200*200 -->
+<!-- but as we  give padding around the content then then box sise will be padding+content size  that is width=200+40+40 and height="200+40+40"-->

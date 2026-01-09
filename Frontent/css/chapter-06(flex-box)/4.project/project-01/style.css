@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgba(128, 0, 128, 0.082);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-card {
+    display: flex;
+    width: 50%;
+    min-height: 500px;
+
+
+}
+
+.register-card_left_heading {
+    margin-bottom: 30px;
+}
+
+.register-card_left_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.register-card_left_form input {
+    border: none;
+    border: solid 1px lightgrey;
+    padding: 10px;
+    height: 20px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.register-card_left_form_submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    height: 42px;
+    background-color: rgba(128, 0, 128, 0.438);
+    cursor: pointer;
+    color: white;
+
+}
+
+.register-card_left {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.register-card_left_form input:focus {
+    box-shadow: 0 0 4px rgba(24, 119, 242, 0.5);
+    border-color: #1877f2;
+}
+
+
+
+.register-card_right {
+    background-image: url("https://media.istockphoto.com/id/1371940128/photo/multiracial-friends-taking-big-group-selfie-shot-smiling-at-camera-laughing-young-people.jpg?s=612x612&w=0&k=20&c=FPs-C92zbN6RkHnPG4Fl9zyP2-HZWGy9Prdt46Yn-IY=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.register-card_right_heading {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+
+.register-card_right_button {
+    width: 50%;
+    color: black;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}

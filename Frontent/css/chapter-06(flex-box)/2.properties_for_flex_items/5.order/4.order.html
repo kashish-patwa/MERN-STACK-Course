@@ -1,0 +1,72 @@
+<!-- order properties  -->
+
+<!-- The order property in Flexbox defines the order in which flex items are displayed inside a flex container.
+
+In simple words:
+It lets you change the visual order not actual document order of elements using CSS —
+without moving them in your HTML code. -->
+
+<!--by default order is zero  -->
+
+
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    
+          .box1{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            order:3;
+          }
+          .box2{
+            background-color:red;
+            width: 100px;
+            height: 100px;
+            order:2;
+          }
+          .box3{
+            background-color:green;
+            width: 100px;
+            height: 100px;
+            order: 1;
+          }
+          .box4{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+          }
+          .container{
+            background-color: aqua;
+            width: 900px;
+            height: 500px;
+            display: flex;
+        
+            
+          }
+    </style>
+</head>
+<body>
+       <div class="container">
+            <div class="box1 box">
+                box1
+            </div>
+            <div class="box2 box">
+                box2
+            </div>
+            <div class="box3 box">
+               box3
+            </div>
+       </div>
+</body>
+</html>

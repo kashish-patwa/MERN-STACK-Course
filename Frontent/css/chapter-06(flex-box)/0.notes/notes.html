@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox Notes</title>
+
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #2b6cb0;
+    }
+    pre {
+      border-radius: 6px;
+    }
+    .note {
+      background: #fff;
+      border-left: 4px solid #2b6cb0;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Chapter-06 – CSS Flexbox</h1>
+
+  <h2>What is CSS Flexbox?</h2>
+  <p>
+    CSS Flexbox (Flexible Box) is a <b>one-dimensional layout model</b> used to
+    design one-Dimentional flexible and responsive layouts.
+  </p>
+
+  <ul>
+    <li>It works in one direction at a time (row or column)</li>
+    <li>Makes alignment and spacing easier</li>
+    <li>Helps in building responsive layouts</li>
+  </ul>
+
+  <!-- One Dimensional Layout Image -->
+  <h2>One-Dimensional Layout (Flexbox)</h2>
+  <div class="note">
+    Flexbox controls layout in <b>one direction at a time</b> —
+    either row (horizontal) or column (vertical).
+  </div>
+
+  <div style="background:#fff; padding:15px; border-radius:6px; text-align:center; margin:20px 0;">
+    <img src="https://blog.logrocket.com/wp-content/uploads/2023/01/flex-direction.png"alt="One Dimensional Flexbox Layout"
+         style="max-width:500px; height:auto;">
+    <p><b>Figure:</b> One-Dimensional Layout in Flexbox</p>
+  </div>
+
+  <h2>Flex Container & Flex Items</h2>
+  <p>
+    When <code>display: flex</code> is applied to an element:
+  </p>
+  <ul>
+    <li>The element becomes a <b>flex container</b></li>
+    <li>Its direct children become <b>flex items</b></li>
+  </ul>
+
+  <pre><code class="language-css">.container {
+  display: flex;
+}</code></pre>
+
+<img src="https://cdn-media-1.freecodecamp.org/images/6WwoIEc45lUHUcFQCmD8GmziiISm2lO64Y1-" alt="">
+
+  <div class="note">
+    <b>Note:</b> Only direct children become flex items.
+    Grandchildren are not affected unless their parent is also a flex container.
+  </div>
+
+  <h2>Main Axis & Cross Axis</h2>
+  <ul>
+    <li><b>Main Axis</b> → Default is horizontal (row)</li>
+    <li><b>Cross Axis</b> → Perpendicular to the main axis</li>
+    <li>Axis direction depends on <code>flex-direction</code></li>
+  </ul>
+
+  <!-- Main Axis vs Cross Axis Image -->
+  <div style="background:#fff; padding:15px; border-radius:6px; text-align:center; margin:20px 0;">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*wEbDC0k7RrWisqKKDytSCg.png"
+         alt="Main Axis and Cross Axis"
+         style="max-width:500px; height:auto;">
+    <p><b>Figure:</b> Main Axis and Cross Axis in Flexbox</p>
+  </div>
+
+  <!-- ================= FLEX CONTAINER PROPERTIES ================= -->
+
+<h2>Flex Container Properties</h2>
+
+<p>
+  Flex container properties are applied to the <b>parent element</b>
+  (the element on which <code>display: flex</code> is used).
+  These properties control the <b>layout, alignment, and spacing</b>
+  of flex items collectively.
+</p>
+
+<div class="note">
+  <b>Flex container properties:</b>
+  <ol>
+    <li>flex-direction</li>
+    <li>justify-content</li>
+    <li>align-items</li>
+    <li>flex-wrap</li>
+    <li>align-content</li>
+  </ol>
+</div>
+  <h2>flex-direction Property</h2>
+  <p>Defines the direction of the main axis.</p>
+
+  <pre><code class="language-css">.container {
+  flex-direction: row;
+}</code></pre>
+
+  <ul>
+    <li>row (default)</li>
+    <li>row-reverse</li>
+    <li>column</li>
+    <li>column-reverse</li>
+  </ul>
+
+  <h2>justify-content Property</h2>
+  <p>Aligns flex items along the <b>main axis</b>.</p>
+
+  <pre><code class="language-css">.container {
+  justify-content: center;
+}</code></pre>
+
+  <ul>
+    <li>flex-start</li>
+    <li>center</li>
+    <li>flex-end</li>
+    <li>space-between</li>
+    <li>space-around</li>
+    <li>space-evenly</li>
+  </ul>
+
+  <img src="https://cdn-media-1.freecodecamp.org/images/OBGVr-DdHiQ2y9VOWuhXqXeGnFnyDSBTx7hv" alt="">
+
+  <h2>align-items Property</h2>
+  <p>Aligns-items align the  items along the <b>cross axis</b>.</p>
+
+  <pre><code class="language-css">.container {
+  align-items: center;
+}</code></pre>
+
+  <ul>
+    <li>stretch (default)</li>
+    <li>center</li>
+    <li>flex-start</li>
+    <li>flex-end</li>
+    <li>baseline</li>
+  </ul>
+  <img src="https://cdn-media-1.freecodecamp.org/images/UgsULw0Kk49l-l1wSzeurYNJKCmcA-01oE8a" alt="">
+
+  <h2>flex-wrap Property</h2>
+  <p>Controls whether flex items wrap onto multiple lines.</p>
+
+  <pre><code class="language-css">.container {
+  flex-wrap: wrap;
+}</code></pre>
+
+  <ul>
+    <li>nowrap (default)</li>
+    <li>wrap</li>
+    <li>wrap-reverse</li>
+  </ul>
+
+  <h2>align-content Property</h2>
+  <p>Aligns multiple rows of flex items along the cross axis.</p>
+
+  <div class="note">
+    <b>Important:</b> align-content works only when <code>flex-wrap: wrap</code> is used.
+  </div>
+
+  <pre><code class="language-css">.container {
+  align-content: space-between;
+}</code></pre>
+
+  <h2>Flexbox vs Grid</h2>
+  <ul>
+    <li><b>Flexbox</b> → One-dimensional layout</li>
+    <li><b>Grid</b> → Two-dimensional layout</li>
+  </ul>
+
+  <div style="background:#fff; padding:15px; border-radius:6px; text-align:center; margin:20px 0;">
+    <img src="https://sttotherootprodeuw001.blob.core.windows.net/strapi-uploads/assets/image_091ba04893.png" alt="Main Axis and Cross Axis"style="max-width:300px; height:auto;">
+    <p><b>Figure:</b> Main Axis and Cross Axis in Flexbox</p>
+  </div
+
+  <!-- ================= FLEX ITEM PROPERTIES ================= -->
+
+<h2>Flex Item Properties</h2>
+
+<p>
+  Flex item properties are applied to <b>individual flex items</b>
+  (direct children of a flex container).
+  These properties control the <b>size, order, and alignment</b>
+  of each flex item.
+</p>
+
+<div class="note">
+  <b>Flex item properties:</b>
+  <ol>
+    <li>align-self</li>
+    <li>flex-grow</li>
+    <li>flex-shrink</li>
+    <li>order</li>
+  </ol>
+</div>
+
+<h1>align-self Property</h1>
+<p>Let’s see what this looks like. You’ll apply align-self to two squares, and for the rest apply align-items: center and flex-direction: row.</p>
+<img src="https://cdn-media-1.freecodecamp.org/images/HbnMZT330ylw5idocqrjOfp9DrlZt9JrJm9o" alt="">
+
+
+<h2>flex-grow Property</h2>
+<p>
+  <code>flex-grow</code> controls how much a flex item should grow
+  relative to other flex items when <b>extra space is available</b>.
+</p>
+
+<div class="note">
+  <b>Default:</b> <code>flex-grow: 0</code>  
+  <br>
+  If there is no extra space, flex-grow has no effect.
+</div>
+
+<h2>flex-shrink Property</h2>
+<p>
+  <code>flex-shrink</code> controls how much a flex item should shrink
+  when there is <b>not enough space</b> in the container.
+</p>
+
+<div class="note">
+  <b>Default:</b> <code>flex-shrink: 1</code>
+</div>
+
+<h3>Prevent Shrinking</h3>
+<pre><code class="language-css">.box {
+  flex-shrink: 0;
+}</code></pre>
+
+<div class="note">
+  Item will not shrink even if the container is smaller.
+</div>
+
+<div class="note">
+  <b>Note:</b>  
+  The shorthand property <code>flex</code> is used for
+  <code>flex-grow</code>, <code>flex-shrink</code>, and
+  <code>flex-basis</code>.
+</div>
+<h2>flex-grow vs flex-shrink (Summary)</h2>
+
+<div class="note">
+  <b>flex-grow</b>
+  <ul>
+    <li>Works when extra space is available</li>
+    <li>Grows items to fill empty space</li>
+  </ul>
+</div>
+
+<div class="note">
+  <b>flex-shrink</b>
+  <ul>
+    <li>Works when space is insufficient</li>
+    <li>Shrinks items to fit container</li>
+  </ul>
+</div>
+
+  <h2>Short Exam Definition</h2>
+  <div class="note">
+    CSS Flexbox is a one-dimensional layout module that helps in creating
+    flexible and responsive layouts.
+  </div>
+
+  <!-- Prism.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+
+</body>
+</html>

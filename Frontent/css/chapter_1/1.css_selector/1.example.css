@@ -1,0 +1,13 @@
+/* id selector  */
+#id-selector{
+     background-color: red;
+}
+/* class selector */
+.class-selector{
+   background-color: blue;
+}
+
+/* element selector */
+span{
+  background-color: blueviolet;
+}

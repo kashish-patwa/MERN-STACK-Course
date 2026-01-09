@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* header */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+
+}
+
+
+.nav-bar-container_brand-logo {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    border: 1px solid #0f1111;
+    padding-right: 10px;
+    border-radius: 2px;
+
+}
+
+.nav-bar-container_brand-logo:hover {
+    border: 1px solid white;
+}
+
+
+
+.nav-bar-container {
+    background-color: #0f1111;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    height: 60px;
+    box-sizing: border-box;
+    /* height: 60px; */
+    /* padding-top: 5px; */
+}
+
+.nav-bar-container_brand-logo-anchor {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar-container_location-container {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-container_location-container_location-icon {
+    margin-top: 12px;
+}
+
+
+.nav-bar-container_search-box {
+    height: 33px;
+    width: 300px;
+    outline: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+}
+
+.nav-bar-container_search-box-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+    height: 33px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+.nav-bar-container_search-box-right {
+    background-color: bisque;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 33px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* border: 2px solid rgba(255, 228, 196, 0.26); */
+
+.nav-bar-container_search-box-container {
+    display: flex;
+}
+
+.nav-bar-container_flag-container {
+    display: flex;
+    align-items: center;
+}
+
+/* main */
+
+body {
+    background-color: rgba(95, 158, 160, 0.212);
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    position: relative;
+    top: 250px;
+}
+
+.product-card {
+    width: 310px;
+    height: 420px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+}
+
+.product-card-section_card1_top-card {
+    display: flex;
+}
+
+.product-card-section_card1_bottom-card {
+    display: flex;
+}
+
+.product-card-section_card1_heading {
+    font-size: 21px;
+    color: #0f1111;
+}
+
+.product-card-section_card1_top-left-sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card-section_card1_top-right-sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card-section_card1_top-left-sub-card_info_discount {
+    background-color: #cc0c39;
+    padding: 4px 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-card-section_card1_top-left-sub-card_info_bcz {
+    color: #cc0c39;
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.product-card-section_card1_top-left-sub-card_info {
+    display: flex;
+    margin-top: 3px;
+}
+
+.product-card-section_card1_top-card {
+    margin-top: 20px;
+}
+
+.product-card-section_card1_bottom-info {
+    color: #2162a1;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.product-card-section {
+    background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/Events/img25/Nimesh/Jupiter25_PC_Phase_2b_H1_Ends_Tomorrow_2X._CB797031012_.jpg);
+    /* background-color: rgba(100, 148, 237, 0.158); */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: -1;
+}
