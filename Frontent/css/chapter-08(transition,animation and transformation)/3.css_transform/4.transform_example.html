@@ -1,0 +1,54 @@
+<!-- scale -->
+
+<!-- Example 2 – scale  the element alnog the X dimention or Y dimention -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scale</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /*initial state  */
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border: 5px solid red;
+    position: relative;
+    top: 100px;
+    left:400px;
+    /* applying transition proerty */
+    transition-property:transform;
+    transition-duration: 3s;
+    transition-timing-function:linear;
+    transition-delay: 0s;
+  }
+
+
+  /*final state  */
+  .circle:hover {
+      /* transform:scaleX(2); */
+      /* transform: scaleY(3); */
+      /* transform: scaleZ(4); */
+       /* transform: scale(3,4); */
+      /* transform:scale3d(2,2,2); */
+      
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="circle">scale  me </div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,50 @@
+<!-- Example 2 – Rotate the element along the X-axis or Y-axis or Z-axis -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rotate</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /*initial state  */
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border: 5px solid red;
+    position: relative;
+    top: 100px;
+    left:400px;
+    /* applying transition property */
+    transition-property:transform;
+    transition-duration: 3s;
+    transition-timing-function:linear;
+    transition-delay: 0s;
+  }
+
+
+  /*final state  */
+  .circle:hover {
+     transform: rotateX(90deg);
+    /* transform: rotateY(90deg); */
+    /* transform: rotateZ(90deg); */
+    /* transform:rotate3d(90deg); */
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="circle">rotate me </div>
+</body>
+</html>
+
+
+
+ <!-- When you hover, the circle rotates 45° and enlarges smoothly. -->

@@ -1,0 +1,60 @@
+<!-- case1: – Moving or translating the element  -->
+
+<!-- element can move or translate only in a plane that is in xy plane,yz plane and xz plane-->
+
+<!-- in any plane element can translate in four possible direction that is left,right ,top and bottom -->
+
+<!-- we can not translate the element's from one plane to another plane like xy to xz etc
+beacuse if we do this then it is not a traslating  actually it is a rotaion  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css translate</title>
+       <style>
+        
+        *{
+          margin: 0;
+          padding: 0;
+        }
+/* intial proeprty */
+        .box{
+          width: 100px;
+          height: 100px;
+          background: lightblue;
+          position: relative;
+          left: 200px;
+          top:200px;
+
+          /* applying transtion property */
+           transition-property:transform;
+           transition-duration: 3s;
+           transition-timing-function:linear;
+           transition-delay: 0s;
+          }
+          
+
+        .box:hover{
+            /* transform:translateX(200px); */
+            /* transform:translateX(-200px);  */
+            /* transform: translateY(200px); */
+            /* transform: translateY(-200px); */
+            /* transform: translate(200px,200px); */
+            /* transform: translate3d(200px,200px,200px); */
+            /* transform: perspective(600px) translateZ(200px); */
+          /* shorthand */
+        }
+
+        
+        
+       </style>
+</head>
+<body>
+       <div class="box">Move or translate me  in all possible direction</div>
+</body>
+</html>
+

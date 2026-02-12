@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+.scene {
+  perspective: 800px;
+}
+
+.cube{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(0,0,255,0.7);
+  border: 2px solid #fff;
+}
+
+.front  { transform: translateZ(25px); }
+.back   { transform: rotateY(180deg) translateZ(25px); }
+.left   { transform: rotateY(-90deg) translateZ(25px); width: 50px; }
+.right  { transform: rotateY(90deg) translateZ(125px); width: 50px; }
+.top    { transform: rotateX(90deg) translateZ(25px); height: 50px; }
+.bottom { transform: rotateX(-90deg) translateZ
+(125px); height: 50px; }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="scene">
+   <div class="cube">
+   <span class="face front"></span>
+  <span class="face back"></span>
+  <span class="face top"></span>
+  <span class="face bottom"></span>
+  <span class="face left"></span>
+  <span class="face right"></span>
+  </div>
+  </div>
+  
+</body>
+</html>

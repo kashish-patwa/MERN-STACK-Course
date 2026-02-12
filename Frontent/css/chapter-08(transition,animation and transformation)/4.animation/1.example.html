@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      /*intial state  */
+    .box {
+      
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    
+      /* Animation properties */
+      animation-name:rotate;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count:infinite;
+    }
+    
+    /* Keyframes for final state*/
+    @keyframes rotate {
+      from {
+        transform: rotatey(0deg);
+        /* transform: scale(45deg,45deg); */
+        background: red;
+      }
+      to {
+        background: blue;
+        transform: rotatey(360deg);
+      }
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>
+
+
+
+<!-- Explanation -->
+
+<!-- animation-name: connects to @keyframes moveBox. -->
+
+<!-- animation-duration: takes 3 seconds for one move. -->
+
+<!-- animation-timing-function: starts slow, speeds up, ends slow. -->
+
+<!-- animation-delay: waits 1 second before starting. -->
+
+<!-- animation-iteration-count: repeats forever. -->
+
+<!-- animation-direction: goes forward → backward → forward (alternate). -->
+
+<!-- animation-fill-mode: keeps the final look after finishing. -->
+
+
+<!-- Shortcut Form -->
+<!-- You can write all in one line too: -->
+<!-- animation: moveBox 3s ease-in-out 1s infinite alternate forwards; -->

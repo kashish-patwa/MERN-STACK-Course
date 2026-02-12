@@ -1,0 +1,41 @@
+<!-- case 1"let's apply the transtion on the basis of user action click(active) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition example </title>
+    <style>
+        /* intial state */
+        .box{
+            background-color: red;
+            width: 200px;
+            height:200px;
+            border: 5px solid black;
+
+
+           /* applying the transtion property */
+           transition-property:all ;
+           transition-duration:4s;
+           transition-timing-function:linear;
+           transition-delay:2s;
+
+
+        }
+        /* final state */
+        .box:active{
+            background-color: blue;
+            border: 5px solid brown;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>case2:let's apply the transtion on the basis of user action click(active)</h1>
+       <div class="box">
+           
+       </div>   
+</body>
+</html>

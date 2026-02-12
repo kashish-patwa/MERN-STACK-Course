@@ -1,0 +1,59 @@
+<!-- case 3"let's apply the transtion on the basis of user action focus(active) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition example </title>
+    <style>
+        /* intial state */
+        .box{
+            background-color: red;
+            width: 200px;
+            height:200px;
+            border: 5px solid black;
+
+
+           /* applying the transtion property */
+           transition-property:all ;
+           transition-duration:1s;
+           transition-timing-function: ease;
+           transition-delay: 0s;
+
+
+        }
+        /* final state */
+        .box:focus{
+            background-color: blue;
+            border: 5px solid brown;
+
+        }
+        /*note in above we have applyed focus on div element which is not a input element so it does't work  */
+
+        /* so we have to apply on input element */
+
+        /* intial state  */
+        input{
+            outline: none;
+            height: 30px;
+            transition: all;
+            transition-duration: 4s;
+            transition-timing-function: linear;
+        }
+        /*final state  */
+        input:focus{
+            
+             border:2px solid rgba(0, 0, 255, 0.884);
+        }
+
+    </style>
+</head>
+<body>
+<h1>case3:let's apply the transtion on the basis of user action focus(on input element)<h1>
+       <div class="box">
+           
+       </div>   
+<input type="text" placeholder="enter name">
+</body>
+</html>

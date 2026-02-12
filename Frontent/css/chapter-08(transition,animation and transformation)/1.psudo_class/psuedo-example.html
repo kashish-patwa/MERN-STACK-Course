@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>psudo class example</title>
+  <style>
+     /* defining a intial state of div element */
+     .box{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+     }
+
+     /* intial state of button element */
+     .btn{
+       height: 30px;
+       width: 300px;
+       margin-top: 30px;
+     }
+
+     /* final state of button element on the basis of user action focus  */
+     .btn:focus{
+      border: 5px solid red;
+      outline: none;
+    }
+
+     /* final state of div element  on the basis of user action hover and active*/
+     .box:active{
+        background-color: blue;
+        border: 5px solid black;
+        left: 1250px;
+     }
+
+
+  </style>
+<body>
+      <div class="box">
+          
+      </div>
+      <input class="btn" type="text">
+</body>
+</html>
