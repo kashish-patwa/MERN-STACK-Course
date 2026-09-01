@@ -1,0 +1,7 @@
+export-it enables the use of component in other file
+
+default export:it allow a exporting a single component from the module 
+
+named export:it allows a exporting a multiple component from the module
+
+importing:to use exported component,you need to import it in the destination file using import syntax

@@ -1,0 +1,16 @@
+{
+  "name": "full_project_using_http-05",
+  "version": "1.0.0",
+  "description": "i create my server with http libery/module ",
+  "license": "ISC",
+  "author": "kashish patwa",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

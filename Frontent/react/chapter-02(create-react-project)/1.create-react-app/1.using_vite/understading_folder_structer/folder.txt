@@ -1,0 +1,12 @@
+1.node-modules:has all the installed node packages or modules(dependecies ki dendencies)
+
+2.public folder:contian all the staic files that don't changed
+
+3.src folder:
+     1.component
+     2.assets:
+     3.styles:
+
+4.pakcage.json
+
+5.vite.config.js

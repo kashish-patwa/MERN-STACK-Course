@@ -1,0 +1,10 @@
+
+//------------------------------what is the diffreence b/w gpt ,chat gpt and open ai--------------------------------------
+
+//GPT (Generative Pre-trained Transformer) ek type ka LLM hai jo text generate karne ke liye use hota hai. GPT-3 aur GPT-4 iske versions hain, jisme GPT-4 zyada advanced aur powerful hai.abhi latest verstion gpt-5 hai
+
+//ChatGPT ek specific application hai GPT model ka, jo conversational AI ke liye design kiya gaya hai. Iska main focus user ke questions ka jawab dena aur natural language me baat cheet karna hai. ChatGPT ko OpenAI ne develop kiya hai, aur ye GPT-3 ya GPT-4 par based ho sakta hai, depending on the version used.
+
+// OpenAI ek research organization hai jo artificial intelligence ke field me kaam karti hai. OpenAI ne GPT series ke models develop kiye hain, aur ChatGPT bhi unka ek product hai. OpenAI ka mission safe AI develop karna aur uske benefits ko sabke liye accessible banana hai.
+
+// question:list of ai company and their llm model and  therir popular product

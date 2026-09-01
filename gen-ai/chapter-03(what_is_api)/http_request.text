@@ -1,0 +1,83 @@
+// what is http 
+
+//http is a hyper text transfer protocol that is it is a set of rule used to communcate b/w two deviecd over the newtork 
+
+
+
+PUT/PATCH → Update karna
+DELETE → Delete karna
+
+
+2. URL (Route)
+POST /login
+
+Yahan /login batata hai ki server ke kis endpoint ko hit karna hai.
+
+
+3. Headers
+
+Extra information hoti hai.
+
+Content-Type: application/json
+Authorization: Bearer token123
+Cookie: sessionId=abc123
+
+xamples:
+
+Content-Type → Data kis format mein hai
+Authorization → User ka token
+Cookie → Session information
+
+
+4. Body
+
+Actual data jo client bhejna chahta hai.
+
+{
+  "email": "shahid@gmail.com",
+  "password": "123456"
+}
+
+Ye login details hain.
+
+
+
+//Server side mein kya hota hai?
+
+Express app:
+
+app.post("/login", (req, res) => {
+    console.log(req.body);
+});
+
+
+
+
+Jab request aati hai:
+
+Method  -> POST
+URL     -> /login
+Headers -> Content-Type: application/json
+Body    -> {email, password}
+
+Express in sab ko req object mein daal deta hai:
+
+req.method
+req.url
+req.headers
+req.bodyHTTP request server par jaati hai, to uske andar kuch information hoti hai jisse server samajh pata hai ki client kya chahta hai.
+
+
+HTTP Request ke main 
+
+
+1. Request Method
+
+Batata hai kya action karna hai.
+
+GET /users
+POST /login
+PUT /user/1
+DELETE /user/1
+GET → Data lena
+POST → Data bhejna/create karna

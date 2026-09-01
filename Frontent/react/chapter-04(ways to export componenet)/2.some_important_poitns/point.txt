@@ -1,0 +1,8 @@
+1.naming:name of function must be capitalized
+
+2.unlike vanilla js where you can't write html directly ,in react ,you can embeded html-like stntax with java script using jsx
+
+
+3.In react,css can be directly imported in to the component files,allowing for moduler and component-specific styling.
+
+4.java script expression:using {} , we can embeded any js expression directly within jsx.this includes variable,function,calls,and more 

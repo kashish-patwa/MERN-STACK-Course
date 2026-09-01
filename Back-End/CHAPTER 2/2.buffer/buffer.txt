@@ -1,0 +1,13 @@
+//When Nodejs receives incoming data, it stores it in a Buffer
+
+//A Buffer in Node.js is a special object used to store a client incomming data in binary format(because network data (HTTP requests arrives as raw binary, not as plain text).
+
+
+//if you print it
+console.log(chunk);
+
+//You see something like:
+<Buffer 6e 61 6d 65 3d 73 68 61 68 69 64>
+
+
+//This is Node showing the raw bytes in hexadecimal format.+

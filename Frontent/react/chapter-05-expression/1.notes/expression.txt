@@ -1,0 +1,35 @@
+//Curly Braces {} in JSX is called JavaScript Expression Container used to insert JavaScript expressions inside JSX html element
+
+// what is  java script expressions
+
+//An expression is something that produces a value.
+
+
+exampe:1
+
+a=10 + 20
+
+a will give 30 ,so it is a expresstion
+
+
+exampe:2
+name="hello"
+name will give "string",so it is a expresstion
+
+exampe:3
+items.map(item => items)
+returns a new array , so it is a expresstion
+
+example:4
+
+true ? <h1>Hello</h1> : null
+it give either h1 or null,so ternary operator is a expression
+
+
+
+Since expressions produce values, React can render them inside {}.
+
+
+note:we can't write a statment inside a {}
+
+A statement performs an action but does NOT directly produce a value.

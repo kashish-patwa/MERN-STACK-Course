@@ -1,0 +1,121 @@
+// 1)Rules based model(ELIZA) 
+
+// Rule-Based Model bilkul aise hi kaam karta tha:
+
+// Humne ek database / script banaya hota tha jisme rules likhe hote the:
+
+// Agar user ne yeh question poocha → toh yeh jawab dena.
+
+// Agar “I am sad” likha → reply “Why are you sad?”
+
+// Agar “Hello” likha → reply “Hi, how are you?”
+
+// Jab user input deta tha, AI simply us rule database ko check karta tha aur wahi reply de deta tha.
+
+// Iska Matlab:
+
+// AI khud se seekhta nahi tha → Sirf wahi jawab de sakta tha jo pehle se rules mein likha ho.
+
+// Agar koi naya question aagaya jo rules mein nahi tha → AI chup ho jaata ya wrong reply deta.
+
+// Example:
+
+// Database Rules:
+// If user says "Hi" → reply "Hello!"
+// If user says "I am sad" → reply "Why are you sad?"
+
+// User: "Tell me a joke"
+// AI: Sorry… I don’t know.
+
+// Limitation:
+
+// Ye model smart nahi tha, bas ek lookup table tha.
+// Isiliye ise chatbot lagta tha, intelligence nahi.
+//    ↓
+
+
+
+
+// 2) Statisticcal model (n-grams, word frequency)  
+
+
+
+
+       
+
+//  Neural language model (word meanings as numbers)  
+ // RNNs & LSTMs (short memory text generation) 
+
+
+//Large language Models(Transformers)
+
+//LLM (Large Language Model) ka Working
+
+// 1. User Prompt → Tokenization
+
+// Aapka likha hua text chhote parts (tokens) me tod diya jata hai.
+
+// Example:
+
+// User: "I love AI"
+// Tokens: ["I", "love", "AI"]
+
+// 2. Tokens → Numbers (Embeddings)
+
+// Har token ko ek unique number (ID) aur ek vector representation (math form) me badal diya jata hai.
+
+// Example:
+
+// "I" → 101
+// "love" → 202
+// "AI" → 303
+
+// 3. Pattern Recognition (Neural Network)
+
+// Ab LLM apni training knowledge use karta hai (jo usne billions of sentences se seekha hai).
+
+// Ye dekhta hai ki tokens kaunsa pattern follow karte hain.
+
+// 👉 Example:
+
+// "I love ___"
+// Most probable tokens:
+// - "you" → 0.7
+// - "pizza" → 0.2
+// - "dog" → 0.1
+
+// 4. Next Token Prediction
+
+// Model sabse high probability wale token ko choose karta hai → "you".
+
+// Fir phir se next word predict karta hai, aur sentence aage build hota hai.
+
+// Simplified Analogy
+
+// Socho aap ek guessing game khel rahe ho.
+
+// Main bolta hoon: “Twinkle twinkle little …”
+
+// Aap automatically guess karoge → “star” 
+
+// 👉 LLM bhi yahi karta hai → next word guess karta hai patterns ke basis pe.
+
+// ⚡ Final Flow
+// User Prompt → Tokenize → Numbers Assign → Patterns Check → Next Token Predict → Full Answer
+
+
+// ✅ Isliye LLM har prompt ka naya answer bana sakta hai, kyunki wo database se copy nahi karta, balki patterns se next word guess karta hai.
+
+// ✅ In short:
+
+// First, AI just repeated rules (parrot).
+
+// Then, it counted word patterns (predictive text).
+
+// Then, it understood word meanings (math dictionary).
+
+// Then, it learned short storytelling (short memory).
+
+// Finally, Transformers unlocked long, meaningful text → leading to ChatGPT.
+
+

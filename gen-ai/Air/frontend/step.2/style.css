@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar{
+    width: 260px;
+    background-color: #171717;
+}
+
+.main{
+    flex: 1;
+    background-color: #212121;
+}

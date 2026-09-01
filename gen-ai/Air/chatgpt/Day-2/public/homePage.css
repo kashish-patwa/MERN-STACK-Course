@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.mainbox{
+height: 100vh;
+display: flex;
+
+}
+
+.leftbox{
+
+ width: 350px;
+height: 100vh;
+background:#171717;
+
+
+}
+
+
+.rightbox{
+     width: 1500px;
+    height: 100vh;
+    background:#2f2f2f;
+  
+    
+}
+
+.chat-button{
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background:#3a3a3a;
+    width: 155px;
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 130% ;
+}
+
+.chatgpt-clone{
+    color: white;
+    display: flex;
+    justify-content:center ;
+    margin-top: 100px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 380%;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+.input-box{
+display: flex;
+justify-content: center;
+margin-top: 30px;
+
+
+}
+
+.input-box input{
+  padding: 20px;
+  border-radius: 10px;
+  width: 700px;
+  border: none;
+  background-color: #3a3a3a;
+  
+}

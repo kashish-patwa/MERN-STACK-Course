@@ -1,0 +1,42 @@
+// Agar company sirf interface (API) expose karne ke bajay apna pura source code expose kar de, to use generally open source ya source code sharing kaha jata hai, API nahi.
+
+// Case 1: let' suppoase company  Sirf routes : POST /chat expose kati hain 
+
+// function ka code nahi 
+
+function generateResponse(prompt) {
+   // secret implementation
+}
+
+// Ye API hai.
+
+
+
+
+// Case 2: Entire Code Exposed
+
+// Company aapko pura code de deti hai:
+
+function generateResponse(prompt) {
+   // implementation visible
+}
+
+// Ab aap:
+
+// Code dekh sakte ho
+// Modify kar sakte ho (license par depend karta hai)
+// contribute kr saket ho
+// Apne server par chala sakte ho
+
+// Ye source code access ya open-source software kehlata hai.
+
+Example:
+
+React
+Express.js
+
+Inka pura source code public hai.
+
+
+
+

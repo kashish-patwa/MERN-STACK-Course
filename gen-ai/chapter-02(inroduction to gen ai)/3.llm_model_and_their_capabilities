@@ -1,0 +1,7 @@
+
+//-------------------------------------------------------llm model and their capabilities---------------------------------
+
+//1) conversational model -:it is optimisesd for quick response   without thinking through complex multi-step logic before outputting answers.
+
+// 2) reasoning model - :Optimized with advanced chain-of-thought and preference training. They pause to algorithmically "think" through complex multi-step logic before outputting answers.
+

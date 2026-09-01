@@ -1,0 +1,2 @@
+//problem yeh ki humne sara code ek file mein likh diya hai jo ki afficent tarika nahi hai ,optimaise trika yeh hai ki humhe web page ke code ko compunents mein breake karna chaiye 
+//yeh all work hum ch-7  part-2 mein mein karenge 

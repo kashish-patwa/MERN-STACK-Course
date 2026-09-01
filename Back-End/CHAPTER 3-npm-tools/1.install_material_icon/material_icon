@@ -1,0 +1,19 @@
+Material Icon Theme” is a popular icon pack extension that changes the file & folder icons in your explorer sidebar
+
+
+Before installing → all files look same
+After installing →
+
+index.js → JS icon
+
+style.css → CSS icon
+
+app.jsx → React icon
+
+package.json → Node icon
+
+mongodb.js → Mongo icon
+
+router.js → Express icon
+
+folders like src, routes, views, controller get special icons

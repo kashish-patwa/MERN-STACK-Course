@@ -1,0 +1,39 @@
+<!-- what is event -->
+
+->In JavaScript, events are actions performed by the user when user intract with the web page.These actions can include clicking a button, hovering over an element, submitting a form, resizing the window, and many more.
+
+->JavaScript allows you to respond to these events(user action)by attaching a function called  event listeners or event handlers to the elements on the web page. 
+
+->When an event occurs, the corresponding event listener is executed, allowing you to perform specific task  in response to the user's interaction.
+
+<!-- we have diffrent types of events -->
+
+<!-- 1)-Mouse Events -->
+
+a) onclick - When an element is clicked
+b) dblclick - When an element is double - clicked
+c) mousedown - When a mouse button is pressed down
+d) mouseup - When a mouse button is released
+e) mouseover - When the mouse moves over an element
+f) mouseout - When the mouse leaves an element
+g) mousemove - When the mouse is moved inside an element
+
+<!--2 Keyboard Events -->
+a)keydown-When a key is pressed down
+b)keypress-When a key is pressed and held down (deprecated)
+c)keyup-When a key is released
+
+<!--3 Form Events -->
+
+submit-When a form is submitted
+change-When the value of an input/select changes
+input-When a user types something into an input field
+focus-When an element gets focus
+blur-When an element loses focus
+
+<!--4 window events -->
+
+a)load-When the page has fully loaded
+b)resize-When the browser window is resized
+c)scroll-When the page is scrolled
+d)unload-When the page is about to be closed

@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fb;
+}
+
+
+/* Header */
+
+.header{
+  background-color: #111827;
+  color: white;
+  padding: 20px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 32px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover{
+  color: #60a5fa;
+}
+
+
+/* Hero Section */
+
+.hero{
+  height: 90vh;
+  background: linear-gradient(to right,#2563eb,#7c3aed);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  padding: 20px;
+}
+
+.hero h1{
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.hero p{
+  font-size: 22px;
+  max-width: 700px;
+  line-height: 35px;
+}
+
+.hero button{
+  margin-top: 30px;
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: white;
+  color: #2563eb;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover{
+  background-color: #111827;
+  color: white;
+}
+
+
+/* Sections */
+
+.mentor-section,
+.founder-section{
+  padding: 80px 40px;
+}
+
+.mentor-section h1,
+.founder-section h1{
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 50px;
+  color: #111827;
+}
+
+
+/* Cards */
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 280px;
+  background-color: white;
+
+  padding: 25px;
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+.card img{
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 20px;
+}
+
+.card h2{
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card p{
+  color: gray;
+  font-size: 17px;
+}
+
+
+/* Footer */
+
+.footer{
+  background-color: #111827;
+  color: white;
+
+  text-align: center;
+  padding: 25px;
+}

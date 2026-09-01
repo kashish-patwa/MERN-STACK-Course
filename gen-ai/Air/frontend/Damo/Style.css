@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.containar{
+    background-color: #212121;
+    height:100vh ;
+    display: flex;
+}
+
+
+.leftbar{
+    width: 250px;
+    background-color: #171717;
+    height: 100%;
+    padding: 10px;
+    
+}
+
+.rightbar{
+    flex: 1;
+    background-color: #212121;
+}
+
+.header{
+    background-color: pink;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     padding: 10px;
+     color: white;
+     background-color: #2f2f2f;
+}

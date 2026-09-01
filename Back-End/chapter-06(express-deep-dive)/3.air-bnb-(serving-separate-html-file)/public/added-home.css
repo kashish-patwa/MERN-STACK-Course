@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  background-color: red;
+  color: white;
+  display: flex;
+  height:40px;
+  align-items: center;
+
+  
+}
+
+a{
+  color: white;
+  text-decoration: none;
+
+}
+li{
+  list-style: none;
+  margin-left:100px;
+
+  
+}
+
+.container{
+  width: 500px;
+  height: 200px;
+  box-shadow: 5px 5px 10px gray;
+  position: relative;
+  top:50px;
+  left: 400px;
+  padding:20px;
+  text-align: center;
+
+}
+p{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+button{
+  width: 34%;
+  background-color: rgb(200, 0, 0);
+  border-radius:5px;
+  color: white;
+  outline: none;
+  padding: 5px;
+  font-size:large;
+  border: none;
+  margin-top:20px;
+}

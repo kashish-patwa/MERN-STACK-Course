@@ -1,0 +1,28 @@
+//npm init is a command used to create a new Node.js project.
+
+//it create package.json file,which store
+
+->1)your project details
+->2)Installed npm packages or project dependencies(express,mongoose)
+->3)Scripts to run your project(instead of typing long terminal commands, you can put them inside "scripts" and run them easily)
+
+
+
+
+//When you run:npm init
+
+It will ask questions like:
+
+project name
+
+version
+
+description
+
+entry point (e.g., index.js)
+
+author
+
+license
+
+After that, it creates:package.json

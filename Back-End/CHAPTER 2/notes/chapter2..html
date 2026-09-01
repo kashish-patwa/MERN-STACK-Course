@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Node.js Chunks & Buffer</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+h1{
+    text-align:center;
+}
+
+h2{
+    margin-top:30px;
+    color:#2c3e50;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+/* VS Code style */
+.code{
+    background-color:#1e1e1e;
+    color:#d4d4d4;
+    padding:20px;
+    border-radius:8px;
+    font-family: Consolas, monospace;
+    font-size:15px;
+    overflow-x:auto;
+}
+
+/* Syntax colors */
+.code .keyword{ color:#569CD6; }
+.code .string{ color:#CE9178; }
+.code .comment{ color:#6A9955; }
+.code .function{ color:#DCDCAA; }
+
+.highlight{
+    background:#f4f6f8;
+    padding:15px;
+    border-left:5px solid #2c3e50;
+    border-radius:6px;
+    margin-top:10px;
+}
+
+.diagram{
+    font-weight:bold;
+    line-height:2;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Chapter-02</h1>
+<h1>Chunks & Buffer</h1>
+
+<!-- WHAT IS CHUNK -->
+<div class="section">
+<h2>What is Chunk?</h2>
+
+<p>
+    When a client sends data (like in a POST request), Node.js does NOT receive the whole request body at once.
+
+</p>
+
+<p>
+    that is If the client sends a  large file (e.g.,5 MB file), Node does not load all 5 MB into memory at once.
+    
+    Instead, it receive the data in small pieces called <strong>chunk</strong>
+    
+</p>
+
+<div class="highlight">
+     Client <br> ↓ <br>
+     Request Body <br> ↓ <br>
+     Chunk 1 <br>
+     Chunk 2 <br>
+     Chunk 3 <br>
+     Chunk 4 <br>
+... <br>
+Chunk N
+</div>
+
+</div>
+
+<!-- CHUNK LOOK -->
+<div class="section">
+<h2>1️⃣ What does a chunk look like?</h2>
+
+<div class="code">
+&lt;Buffer 6e 61 6d 65 3d 73 68 61 68 69 64&gt;
+</div>
+
+</div>
+
+<!-- SINGLE CHUNK -->
+<div class="section">
+<h2>2️⃣ When do you get only one chunk?</h2>
+
+<p>If request body is small, Node.js may receive only one chunk.</p>
+
+<div class="diagram">
+Client <br> ↓ <br>
+Request Body <br> ↓ <br>
+Chunk 1 &lt;Buffer 6e 61 6d 65&gt;
+</div>
+
+</div>
+
+<!-- MULTIPLE CHUNKS -->
+<div class="section">
+<h2>3️⃣ Multiple Chunks (Large Data)</h2>
+
+<div class="diagram">
+Client <br> ↓ <br>
+Request Body <br> ↓ <br>
+Chunk 1 &lt;Buffer 6e 61 6d 65&gt; <br>
+Chunk 2 &lt;Buffer 6e 72 6d 65&gt; <br>
+Chunk 3 &lt;Buffer 6e 81 6d 65&gt; <br>
+Chunk 4 &lt;Buffer 6e 55 7d 65&gt;
+</div>
+
+</div>
+
+<!-- BUFFER -->
+<div class="section">
+<h2>What is Buffer?</h2>
+<p>
+    
+</p>
+
+<p>
+A Buffer in Node.js is a special object used to store incoming data in binary format.
+</p>
+
+<div class="highlight">
+  Network data (HTTP request) comes in raw binary, not plain text.
+</div>
+
+</div>
+
+<pre class="code">
+  --if you print it--
+  console.log(chunk); 
+</pre>
+
+<!-- OUTPUT -->
+<div class="section">
+<h2>Output</h2>
+
+<div class="code">
+&lt;Buffer 6e 61 6d 65 3d 73 68 61 68 69 64&gt;
+</div>
+
+<div class="highlight">
+   This is hexadecimal representation of binary data.
+</div>
+
+</div>
+
+<!-- parsing the request -->
+
+<h1>Reading Client Data</h1>
+<!-- CORRECT CODE -->
+<div class="section">
+<h2>1. step1:reading chunks</h2>
+
+<div class="code">
+<span class="keyword">const</span> http = require(<span class="string">"http"</span>);<br><br>
+
+<span class="keyword">const</span> server = http.createServer((req,res)=&gt;{<br>
+<span class="comment">&lt;!--sending a form--&gt;</span><br>
+
+&nbsp;&nbsp;<span class="keyword">if</span>(req.url === <span class="string">"/"</span>){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res.write(<span class="string">"&lt;h1&gt;Form Page&lt;/h1&gt;"</span>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res.end();<br>
+&nbsp;&nbsp;}<br><br>
+<!--  -->
+&nbsp;&nbsp;<span class="keyword">else if</span>(req.url === <span class="string">"/submit-details"</span> &amp;&amp; req.method === <span class="string">"POST"</span>){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> body = [];<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;req.on(<span class="string">"data"</span>, (chunk)=&gt;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!--reading a chunks--&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(chunk) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body.push(chunk);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>
+});<br><br>
+
+server.listen(3000, ()=&gt;{<br>
+&nbsp;&nbsp;console.log(<span class="string">"Server running on port 3000"</span>);<br>
+});
+</div>
+
+</div>
+
+<!-- EXPLANATION -->
+<div class="section">
+<h2>3. Flow Explanation</h2>
+
+<div class="highlight">
+1. Client sends form data <br>
+2. Node receives data in chunks <br>
+3. "data" event collects chunks <br>
+4. "end" event means all chunks received <br>
+5. Buffer.concat() joins chunks <br>
+6. Convert to string using toString() <br>
+7. Send response to client
+</div>
+
+</div>
+
+<!-- joing a chunks -->
+<!-- CODE -->
+<div class="section">
+<h2>step2. joining each chunks</h2>
+
+<div class="code">
+<span class="comment">// reading and joining chunks</span><br>
+
+<span class="keyword">const</span> http = require(<span class="string">"http"</span>);<br><br>
+
+<span class="keyword">const</span> server = http.createServer((req,res)=&gt;{<br>
+
+&nbsp;&nbsp;<span class="keyword">if</span>(req.url === <span class="string">"/"</span>){<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;res.write(<span class="string">`
+&lt;h1&gt;Home Page&lt;/h1&gt;
+&lt;form action="/submit-details" method="post"&gt;
+&lt;input type="text" name="userName"&gt;
+&lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+`</span>);<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;res.end();<br>
+&nbsp;&nbsp;}<br><br>
+
+&nbsp;&nbsp;<span class="keyword">else if</span>(req.url === <span class="string">"/submit-details"</span> &amp;&amp; req.method === <span class="string">"POST"</span>){<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> body = [];<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// collect chunks</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;req.on(<span class="string">"data"</span>, (chunk)=&gt;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">"chunk:"</span>, chunk);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body.push(chunk);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// join chunks</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;req.on(<span class="string">"end"</span>, ()=&gt;{<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> finalBuffer = Buffer.concat(body);<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//convert buffer to string</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span>finalData = finalBuffer.toString();<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="string">"Final Data:"</span>, finalData);<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.end();<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+
+&nbsp;&nbsp;}<br>
+
+});<br><br>
+
+server.listen(3000, ()=&gt;{<br>
+&nbsp;&nbsp;console.log(<span class="string">"Server is listening on port 3000"</span>);<br>
+});
+</div>
+
+</div>
+
+<!-- EXPLANATION -->
+<div class="section">
+<h2>How Chunk Joining Works</h2>
+
+<div class="highlight">
+1. Data comes in multiple chunks <br>
+2. Each chunk is stored in an array <br>
+3. Buffer.concat(body) joins all chunks <br>
+4. .toString() converts binary data into readable text <br>
+5. Final data becomes usable (e.g. userName=shahid)
+</div>
+
+</div>
+
+<!-- FLOW -->
+<div class="section">
+<h2>Flow Diagram</h2>
+
+<div class="highlight">
+Client → Chunk1 → Chunk2 → Chunk3 → Array → Buffer.concat() → String → Output
+</div>
+
+</div>
+</body>
+</html>

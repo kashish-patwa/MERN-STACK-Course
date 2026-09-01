@@ -1,0 +1,15 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "i am going to create a simple server to undustand npm init command",
+  "license": "ISC",
+  "author": "kashish patwa",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js",
+    "shuru_ho_ja_bhai":"node app.js"
+  },
+  "keywords": []
+}

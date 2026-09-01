@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  background-color: red;
+  color: white;
+  display: flex;
+  height:40px;
+  align-items: center;
+
+  
+}
+
+a{
+  color: white;
+  text-decoration: none;
+
+}
+li{
+  list-style: none;
+  margin-left:100px;
+
+  
+}
+
+.container{
+  width: 500px;
+  height: 200px;
+  box-shadow: 5px 5px 10px gray;
+  position: relative;
+  top:50px;
+  left: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}

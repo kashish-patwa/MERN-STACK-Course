@@ -1,0 +1,16 @@
+{
+  "name": "1.creating_server",
+  "version": "1.0.0",
+  "description": "this project i am going to create to understand how we can create a server in express",
+  "license": "ISC",
+  "author": "kasish",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

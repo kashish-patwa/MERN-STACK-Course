@@ -1,0 +1,18 @@
+Create the Chat History Section
+
+Now we'll add a list of previous chats below the New Chat button.
+
+
+
+
+outcome
+
++----------------------+
+|  + New Chat          |
+|                      |
+|  HTML Basics         |
+|  CSS Flexbox         |
+|  JavaScript DOM      |
+|  React Interview     |
+|                      |
++----------------------+

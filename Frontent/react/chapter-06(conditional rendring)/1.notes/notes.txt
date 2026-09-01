@@ -1,0 +1,15 @@
+React me Conditional Rendering ka matlab hota hai:
+
+condition ke according UI show karna.
+
+Jaise:
+
+user login hai → Dashboard show karo
+login nahi hai → Login button show karo
+
+
+1)using if else  statement
+2)tenranry operator
+3)Logical &&(and) operator
+
+

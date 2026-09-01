@@ -1,0 +1,36 @@
+Create the ChatGPT-Style Sidebar Layout
+
+Now we'll divide the screen into:
+
+Left Sidebar (for chats)
+Right Main Area (for conversation)
+
+
+//output of this step-02
+
+What you should see
++----------+----------------------+
+| Sidebar  |                      |
+|          |       Main Area      |
+|          |                      |
+|          |                      |
++----------+----------------------+
+Darker sidebar on the left.
+Larger main section on the right.
+Sidebar width fixed at 260px.
+Main section takes the remaining space.
+
+
+
+
+Try adding these temporary colors to verify the layout:
+
+.sidebar{
+    width:260px;
+    background:red;
+}
+
+.main{
+    flex:1;
+    background:blue;
+}

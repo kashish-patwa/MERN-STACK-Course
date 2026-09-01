@@ -1,0 +1,14 @@
+//create new project 
+
+1.install nodemon and express 
+
+2.add two dummy middleware that logs request path and request method respectively.
+
+3.add a third middleware that returns a response 
+
+4.now add handling using two more middleware that handle path /,
+a request to contact /contact-us page 
+
+5.contact us should return a form with name and email as input fileds that submits to /contact-us page also
+
+6.also handle  post incoming request to /contact-us path using separate middleware.
